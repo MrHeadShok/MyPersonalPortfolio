@@ -40,6 +40,85 @@
     #portfolio {
         height: 1000px;
     }
+
+    <!--Cubification-->.wrap {
+        margin-top: 150px;
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+
+    }
+
+    .cube {
+        transform-style: preserve-3d;
+        width: 130px;
+        height: 130px;
+        margin: auto;
+        position: relative;
+
+    }
+
+    .cube img {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        opacity: 0.9;
+
+
+    }
+
+    .cube img:nth-child(1) {
+        transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(2) {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(3) {
+        transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(5) {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .cube img:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    @keyframes loop {
+        from {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+
+        to {
+            transform: rotateX(-360deg) rotateY(360deg) rotateZ(-360deg);
+        }
+    }
+
+    .cube {
+        animation: loop 20s linear infinite;
+    }
+
+
+
+
+    .cubes{
+        display: inline;
+    }
+
+
+
+    footer {
+    display: block;
+      text-align: center;
+      padding: 3px;
+      background-color: DarkSalmon;
+    }
 </style>
 
 <body>
@@ -67,33 +146,37 @@
         <div class="mySlides w3-display-container w3-center">
             <img src="./img//1.jpg" style="width:100%">
             <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>Los Angeles</h3>
-                <p><b>We had the best time playing at Venice Beach!</b></p>
+
             </div>
         </div>
         <div class="mySlides w3-display-container w3-center">
             <img src="./img//2.png" style="width:100%">
             <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>New York</h3>
-                <p><b>The atmosphere in New York is lorem ipsum.</b></p>
+
             </div>
         </div>
         <div class="mySlides w3-display-container w3-center">
             <img src="./img//blurcd.jpeg" style="width:100%">
             <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>Chicago</h3>
-                <p><b>Thank you, Chicago - A night we won't forget.</b></p>
+
             </div>
         </div>
 
         <!-- About Me section -->
-        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="aboutme" >
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="aboutme">
             <h2 class="w3-wide">Call me Taieb!</h2>
             <p class="w3-opacity"><i>I ❤️ ⌨️ & 🖥️</i></p>
             <p class="w3-justify">I'm in my terminal year! (4th year) doing computer engineering;
                 i -however- and unlike most cases and people you might have heard of, i lately started
                 "heavy"-coding; where i just study and try to apply whatever i acquired! <br> I'd -however- be
                 opened to any proposition, so hesitate not to fill that form and let's get in touch.
+            </p>
+            <br>
+            <br>
+            <p class="w3-opacity"><i>About me</i></p>
+            <p class="w3-justify">Mobile App Dev; I'm mostly familiar with cross-plateform
+                development (Ionic/ React Native/ Flutter). <br> Mastering the above technologies
+                requires a good knowledge and some fine manipulation of different JS frameworks.
             </p>
             <div class="w3-row w3-padding-32">
                 <h2 class="w3-wide w3-center">Taieb in 3 pictures :</h2>
@@ -133,29 +216,60 @@
                         <h2>📱</h2>
                         <div class="w3-card">
                             <img src="./img//prad.jpeg" class="w3-round" style="width:60%">
-                            <p class="w3-justify" style="margin-left: 5px; margin-right: 5px; margin-bottom: 5px;">"Trying" is more than 50% 
-                                of you getting your job done!  <br> Imagine, design and create and eventually you'll convert these lines of code into something useful.</p>
+                            <p class="w3-justify" style="margin-left: 5px; margin-right: 5px; margin-bottom: 5px;">
+                                "Trying" is more than 50%
+                                of you getting your job done! <br> Imagine, design and create and eventually you'll
+                                convert these lines of code into something useful.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
+
+
+
         </div>
 
         <!--Portfolio-->
         <div class="w3-black" id="portfolio">
-            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+
+            <div class="w3-container w3-content w3-padding-64" style="max-width:730px">
                 <h2 class="w3-wide w3-center">Some of my work :</h2>
                 <p class="w3-opacity w3-center"><i>Always check my portfolio!</i></p><br>
+<div class="cubes" >
+                <div class="wrap" style="float: left;">
+                    <div class="cube">
+                        <img src="./img/cube1/css.png">
+                        <img src="./img/cube1/html.png">
+                        <img src="./img/cube1/ag.png">
+                        <img src="./img/cube1/js.png">
+                        <img src="./img/cube1/njs.png">
+                        <img src="./img/cube1/ts.png">
+                    </div>
+                </div>
 
+                <div class="wrap" style="float: right; ">
+                    <div class="cube">
+                        <img src="./img/cube2/amd.png">
+                        <img src="./img/cube2/c.png">
+                        <img src="./img/cube2/c++.png">
+                        <img src="./img/cube2/py.png">
+                        <img src="./img/cube2/jv.png">
+                        <img src="./img/cube2/io.png">
+                    </div>
+                </div>
+</div>
 
-                <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+                <div class="w3-row-padding w3-padding-32" style="margin-top: 200px; ">
                     <div class="w3-third w3-margin-bottom">
                         <div class="w3-container w3-white">
+
+
+
                             <p><b>Speech to Text converter // Text to speech converter</b></p>
                             <p class="w3-opacity">Created with AndroidStudio</p>
                             <p>An App to convert your words to a written text. <br>
-                            An App to convert an introtuced text to sound.</p>
+                                An App to convert an introtuced text to sound.</p>
                             <img src="./img/android.PNG" alt="New York" style="width:100%">
 
                         </div>
@@ -170,22 +284,22 @@
                             <p>The app is a photo gallery as mentionned in the title section. <br>
                                 Nothing too fancy here ofc An app to replace your camera
                                 app on your phone 😅.</p>
-                            <img src="./img/ion.jpeg" alt="New York" style="width:100%">
-                    
+                            <img src="./img/ion.jpeg" alt="New York" style="width:85%">
+
                         </div>
                     </div>
 
 
-                        <div class="w3-third w3-margin-bottom">
-                            <div class="w3-container w3-white">
-                                <p><b>ProjectAdmin</b></p>
-                                <p class="w3-opacity">Created with Ionic5-Angular</p>
-                                <p>An app to assist Project owners and headchiefs better administrate their work.
-                                    </p>
-                                <img src="./img/Admin.jpeg" alt="New York" style="width:100%; height: 60%;">
-                        
-                            </div>
+                    <div class="w3-third w3-margin-bottom">
+                        <div class="w3-container w3-white">
+                            <p><b>ProjectAdmin</b></p>
+                            <p class="w3-opacity">Created with Ionic5-Angular</p>
+                            <p>An app to assist Project owners and headchiefs better administrate their work.
+                            </p>
+                            <img src="./img/Admin.jpeg" alt="New York" style="width:89%; ">
+
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,14 +332,13 @@
             </div>
         </div>
 
-        
+
     </div>
 
 
 
 
     <script>
-        
         var myIndex = 0;
         carousel();
 
@@ -252,9 +365,16 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
-
     </script>
 
 </body>
+
+<footer>
+    <div >
+        <img src="./img/contact/gt.png" style=" width:55px; height: 55px;margin-left: 60px;">
+        <img src="./img/contact/fb.png" style=" width:55px; height: 55px;margin-left: 60px;">
+        <img src="./img/contact/ig.png" style=" width:55px; height: 55px;margin-left: 60px;">
+    </div>
+</footer>
 
 </html>
